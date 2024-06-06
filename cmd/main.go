@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
-	nogptallowed.SmokeTest()
+	//nogptallowed.SmokeTest()
+	nogptallowed.PrimeTime()
 }

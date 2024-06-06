@@ -11,6 +11,7 @@ func SmokeTest() {
 	if err != nil {
 		panic(err)
 	}
+	defer listener.Close()
 
 	for {
 		conn, err := listener.AcceptTCP()
@@ -20,6 +21,7 @@ func SmokeTest() {
 
 		go handleConnection(conn)
 	}
+
 }
 
 func handleConnection(conn net.Conn) {
